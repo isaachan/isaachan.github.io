@@ -1,12 +1,13 @@
 # Site settings
-title:
-email:
+title: Embedded Agile
+email: isaachanstar@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
+  Agile has not been successful in Embedded System development like what happend in Enterprise, Web, Telecom software development. This website records the best practices, methods, tools that can adopt agile in embedded software. 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 
-twitter_username:
-github_username:
+twitter_username: isaachan
+github_username: isaachan
 
 # Build settings
 markdown: kramdown
