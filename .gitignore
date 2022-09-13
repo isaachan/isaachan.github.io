@@ -6,3 +6,4 @@ vendor
 **/**.swp
 docs/b
 docs/s
+.DS_Store
