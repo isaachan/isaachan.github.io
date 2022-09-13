@@ -1,0 +1,19 @@
+- category: Engineering
+  name:  Build System
+  picture:  1.jpg
+- category: Engineering
+  name: Pipeline Design
+  picture: 2.jpg
+- category: Engineering
+  name: Test Automation
+  picture: 3.jpg
+- category: Engineering
+  name: Clean Architecture
+  picture: 4.jpg
+- category: Engineering
+  name: Static Analysis
+  picture: 5.jpg
+- category: Engineering
+  name: Productive Tools
+  picture: 6.jpg
+
