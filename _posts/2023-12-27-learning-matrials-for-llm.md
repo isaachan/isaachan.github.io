@@ -8,6 +8,11 @@ tags:
 
 随着chatGPT、Google Gemini、文心一言这些大模型的日趋成熟，大模型思维已经不可避免地成为了未来每个人保持竞争力的必备才能了。本文罗列了一些网络上不错的学习材料。这些资料我自己都看过或者正在看。每个资料我都附上了推荐指数（0-5，分数越高越推荐）以及简介。我是持续更新这个列表。
 
+# LangChain Use Cases
+- 链接：[https://python.langchain.com/docs/use_cases/](https://python.langchain.com/docs/use_cases/)
+- 推荐指数：5
+- 简介：介绍了基于LangChain和LLM的多个典型案例，非常适合产品经理和有想法的开发人员阅读，快速了解利用新技术可以创建什么样的应用和服务。另外，有很多中文/英文的教程都使用了这里的案例。
+
 # 九天玩转Langchain
 - 链接： [https://space.bilibili.com/1235535223/channel/collectiondetail?sid=1794575](https://space.bilibili.com/1235535223/channel/collectiondetail?sid=1794575)
 - 推荐指数：4
