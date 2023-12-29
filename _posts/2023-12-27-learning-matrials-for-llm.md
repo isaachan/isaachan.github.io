@@ -13,11 +13,6 @@ tags:
 - 推荐指数：5
 - 简介：介绍了基于LangChain和LLM的多个典型案例，非常适合产品经理和有想法的开发人员阅读，快速了解利用新技术可以创建什么样的应用和服务。另外，有很多中文/英文的教程都使用了这里的案例。
 
-# 九天玩转Langchain
-- 链接： [https://space.bilibili.com/1235535223/channel/collectiondetail?sid=1794575](https://space.bilibili.com/1235535223/channel/collectiondetail?sid=1794575)
-- 推荐指数：4
-- 简介: 九天玩转Langchain是up主团队于2023年8月推出了一个系列课程。这位up主其他的视频看过一些，内容讲解思路清晰，声音质量也比较高，所以选择他的这个Langchain教程来学习。这个教程我正在看。
-
 # Langchain合集
 - 链接：[https://space.bilibili.com/267440912/channel/collectiondetail?sid=1428550](https://space.bilibili.com/267440912/channel/collectiondetail?sid=1428550)
 - 推荐指数：4
@@ -28,5 +23,9 @@ tags:
 - 推荐指数：4
 - 简介：该系列教程介绍了HuggingFace的使用，包含了大量有趣的实战案例，非常值得一看。
 
+# 九天玩转Langchain
+- 链接： [https://space.bilibili.com/1235535223/channel/collectiondetail?sid=1794575](https://space.bilibili.com/1235535223/channel/collectiondetail?sid=1794575)
+- 推荐指数：3
+- 简介: 九天玩转Langchain是up主团队于2023年8月推出了一个系列课程。这位up主其他的视频看过一些，内容讲解思路清晰，声音质量也比较高，所以选择他的这个Langchain教程来学习。不过这个教程略显啰嗦。
 
 
