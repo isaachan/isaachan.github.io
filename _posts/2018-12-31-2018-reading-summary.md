@@ -4,6 +4,8 @@ description: 2018年读了27本书，另外还有4-5本看到一半左右。
 categories:
  - reading
 tags:
+ - Reading
+ - 2018
 ---
 
 2018年读了27本书，另外还有4-5本看到一半左右。如下，

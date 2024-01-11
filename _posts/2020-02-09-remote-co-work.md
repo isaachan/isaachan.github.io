@@ -4,7 +4,11 @@ description: At the time I wrote this blog post, China is suffering from novel c
 categories:
  - software
 tags:
+ - Collaboration
+ - Communication
+ - Work From Home
 ---
+
 At the time I wrote this blog post, China is suffering from novel coronavirus outbreak. The virus brings lots of messes to the countries, companies, teams and individuals. From 3rd Feb, all employees of Daimler China have to stay at home and work remotely.
 
 This is definitely a “black swan” event. And as the author Taleb keeps telling people, black swan leads to disorder, and people should consider the "things that gain from disorder”. According to the fact that we must work online, so I believe the benefit we should gain is the capability to do remote co-work smoothly.

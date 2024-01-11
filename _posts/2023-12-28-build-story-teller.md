@@ -4,6 +4,13 @@ description: 本文介绍了一个“看图片讲故事”应用程序的构建�
 categories:
  - software
 tags:
+ - LLM
+ - AI创意写作
+ - TTS
+ - 大模型应用
+ - HuggingFace
+ - LangChain
+ - OpenAI
 ---
 
 陪孩子玩儿的时候，我经常用手边的玩具或小物件编故事讲给他听，这激发了我将langchain、大型语言模型（LLM）和huggingface技术融入一个小应用的想法。这个应用能够根据图片生成故事并朗读出来，为孩子带来新奇的故事体验。

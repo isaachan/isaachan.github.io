@@ -2,8 +2,16 @@
 title: Things Behind Event-Driven Architecture
 description: EDA, Event-Driven Architecture, is "a software architecture paradigm promoting the production, detection, consumption of, and reaction to events” (from Wikipedia). It is not new at all. Like many technology concepts, there are few movements, methodologies, tools that appeared behind EDA, direct or indirect related to EDA
 categories:
- - architecture
+ - software
 tags:
+ - Event-Driven Architecture
+ - Domain-Driven Design
+ - Event Sourcing
+ - CQRS
+ - SAGA Pattern
+ - Stream Processing
+ - Enterprise Architecture
+ - Software Architecture
 ---
 
 EDA, Event-Driven Architecture, is "a software architecture paradigm promoting the production, detection, consumption of, and reaction to events” (from Wikipedia). It is not new at all. Like many technology concepts, there are few movements, methodologies, tools that appeared behind EDA, direct or indirect related to EDA, as _“Figure 1, Things behind Event-Driven Architecture”_.

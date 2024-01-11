@@ -4,6 +4,11 @@ description: 本文从欧拉公式的历史演变开始，分析了人类使用�
 categories:
  - software
 tags:
+ - Communiction
+ - Cognition
+ - 表象与真相
+ - 系统思考
+ - 二义性
 ---
 
 # 从欧拉公式说起...

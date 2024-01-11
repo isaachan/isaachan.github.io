@@ -4,6 +4,7 @@ description: 提交代码几乎是每个开发人员都会做的一件事。每�
 categories:
  - software
 tags:
+ - Software Engineering
 ---
 在这里我记录了我所在的团队通常是如何提交代码（以Git为例），以及这种做法背后的价值观。
 

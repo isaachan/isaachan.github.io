@@ -4,6 +4,11 @@ description: 本文介绍如何在QEMU上运行ARM架构的Linux。QEMU作为一
 categories:
  - software
 tags:
+ - QEMU
+ - 模拟器
+ - ARM
+ - Linux内核
+ - 嵌入式
 ---
 
 本文介绍如何在QEMU上运行ARM架构的Linux。QEMU作为一款非常开放且灵活的模拟器，支持市面上众多的处理器架构和SoC，因此使用QEMU进行实验和测试，是非常方便的。

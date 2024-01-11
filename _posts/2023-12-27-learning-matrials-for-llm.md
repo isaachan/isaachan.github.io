@@ -2,8 +2,11 @@
 title: LLM学习材料
 description: 随着chatGPT、Google Gemini、文心一言这些大模型的日趋成熟，大模型思维已经不可避免地成为了未来每个人保持竞争力的必备才能了。本文罗列了一些网络上不错的学习材料。
 categories:
- - software
+ - technology
 tags:
+ - LLM
+ - HuggingFace
+ - LangChain
 ---
 
 随着chatGPT、Google Gemini、文心一言这些大模型的日趋成熟，大模型思维已经不可避免地成为了未来每个人保持竞争力的必备才能了。本文罗列了一些网络上不错的学习材料。这些资料我自己都看过或者正在看。每个资料我都附上了推荐指数（0-5，分数越高越推荐）以及简介。我是持续更新这个列表。

@@ -2,8 +2,17 @@
 title: 这是大模型应用的时代，不是大模型的时代
 description: 在最近几个月高强度的实验后，我们对于未来几年里大模型应用在企业落地的趋势形成了一些观察，我们相信对企业或者个人来说，关注大模型应用，远比关注大模型更重要。大模型应用有四种范式，其中AI Agent和私有知识库是最有可能在企业内部落地的。
 categories:
- - software
+ - technology
 tags:
+ - A Agent
+ - Business Automation
+ - LLM
+ - 大模型应用
+ - LangChain
+ - OpenAI
+ - 私有知识库
+ - RAG
+ - Function Calling
 ---
 
 
