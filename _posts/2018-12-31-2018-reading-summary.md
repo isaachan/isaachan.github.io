@@ -6,6 +6,10 @@ categories:
 tags:
  - Reading
  - 2018
+ - Modelling
+ - Collaboration
+ - Systems Thinking
+ - Complex System
 ---
 
 2018年读了27本书，另外还有4-5本看到一半左右。如下，
