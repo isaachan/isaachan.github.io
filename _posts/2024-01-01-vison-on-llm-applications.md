@@ -4,7 +4,7 @@ description: 在最近几个月高强度的实验后，我们对于未来几年�
 categories:
  - technology
 tags:
- - A Agent
+ - AI Agent
  - Business Automation
  - LLM
  - 大模型应用
