@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">AI Platform overview</title>
+  <desc id="desc">Seven AI platform primitives arranged around a central AI Platform node.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .line { stroke: #94a3b8; stroke-width: 3; stroke-linecap: round; }
+      .node { fill: #ffffff; stroke: #2563eb; stroke-width: 3; rx: 22; ry: 22; }
+      .center { fill: #1d4ed8; stroke: #1e3a8a; stroke-width: 4; }
+      .label { font-family: Inter, Arial, sans-serif; fill: #0f172a; font-size: 24px; font-weight: 700; text-anchor: middle; }
+      .desc { font-family: Inter, Arial, sans-serif; fill: #334155; font-size: 16px; text-anchor: middle; }
+      .centerText { font-family: Inter, Arial, sans-serif; fill: #ffffff; font-size: 34px; font-weight: 800; text-anchor: middle; }
+      .centerSub { font-family: Inter, Arial, sans-serif; fill: #dbeafe; font-size: 18px; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="800" rx="28" ry="28"/>
+
+  <!-- connector lines -->
+  <line class="line" x1="600" y1="400" x2="600" y2="168"/>
+  <line class="line" x1="600" y1="400" x2="840" y2="225"/>
+  <line class="line" x1="600" y1="400" x2="935" y2="400"/>
+  <line class="line" x1="600" y1="400" x2="840" y2="575"/>
+  <line class="line" x1="600" y1="400" x2="600" y2="632"/>
+  <line class="line" x1="600" y1="400" x2="360" y2="575"/>
+  <line class="line" x1="600" y1="400" x2="265" y2="400"/>
+
+  <!-- nodes -->
+  <rect class="node" x="470" y="90" width="260" height="110"/>
+  <text class="label" x="600" y="130">Task</text>
+  <text class="desc" x="600" y="158">Standard task contracts</text>
+  <text class="desc" x="600" y="180">and output shapes</text>
+
+  <rect class="node" x="770" y="180" width="260" height="110"/>
+  <text class="label" x="900" y="220">Context</text>
+  <text class="desc" x="900" y="248">Reusable context packages</text>
+  <text class="desc" x="900" y="270">and retrieval rules</text>
+
+  <rect class="node" x="890" y="345" width="260" height="110"/>
+  <text class="label" x="1020" y="385">Tool</text>
+  <text class="desc" x="1020" y="413">Typed capabilities with</text>
+  <text class="desc" x="1020" y="435">scoped actions</text>
+
+  <rect class="node" x="770" y="560" width="260" height="110"/>
+  <text class="label" x="900" y="600">Model</text>
+  <text class="desc" x="900" y="628">Unified inference, routing,</text>
+  <text class="desc" x="900" y="650">and telemetry</text>
+
+  <rect class="node" x="470" y="630" width="260" height="110"/>
+  <text class="label" x="600" y="670">Workflow</text>
+  <text class="desc" x="600" y="698">Repeatable task-to-action</text>
+  <text class="desc" x="600" y="720">templates</text>
+
+  <rect class="node" x="90" y="560" width="260" height="110"/>
+  <text class="label" x="220" y="600">Evaluation</text>
+  <text class="desc" x="220" y="628">Shared harnesses and</text>
+  <text class="desc" x="220" y="650">regression checks</text>
+
+  <rect class="node" x="50" y="345" width="260" height="110"/>
+  <text class="label" x="180" y="385">Policy</text>
+  <text class="desc" x="180" y="413">Inherited controls and</text>
+  <text class="desc" x="180" y="435">approval rules</text>
+
+  <!-- center -->
+  <circle class="center" cx="600" cy="400" r="118"/>
+  <text class="centerText" x="600" y="392">AI Platform</text>
+  <text class="centerSub" x="600" y="428">shared primitives</text>
+</svg>
