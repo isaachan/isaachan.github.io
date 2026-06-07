@@ -47,7 +47,7 @@ tags:
 
 ## 最小架构与落地顺序
 
-![最小架构与落地顺序](/images/2026-03-06-unified-memory-codex-lark/min-architecture.svg)
+![最小架构与落地顺序](/images/min-architecture.svg)
 *Codex 与 Lark 统一记忆的最小架构与落地顺序*
 
 架构上我们没有搞复杂，就是两个入口（Codex、Lark）都只走同一个 Memory API，再把 workflow、artifact、索引、权限服务挂在后面。  

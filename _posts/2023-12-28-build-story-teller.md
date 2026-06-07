@@ -28,7 +28,7 @@ tags:
 # 将图片转换为一句话描述
 
 首先，我希望这个程序可以根据我随手拍的小玩具或者小物件，可以生成一句话的描述。这里涉及到“Image-to—Text”的模型的能力。于是，我们来到[HuggingFace](https://huggingface.co/)社区，找到[tasks的分类页面](https://huggingface.co/tasks)，在“Multimodel”下找到“Image-to-Text”并进入，里面有300多个用从图片生成文字的模型。有些免费的模型，是可以直接在右边栏上测试效果的。
-![image](/images/2023-12-28-build-story-teller/hf-image-to-text-model.png)
+![image](/images/hf-image-to-text-model.png)
 *Hugging Face上的Image-to-Text模型*
 
 我试过了几个模型，发现目前排名的第一的来自于Salesforce的blip-image-captioning-base效果还可以。下面我们就尝试使用这个模型来实现总结图片内容的功能。由于模型是在HuggingFace上，我们需要用的transformers库。先来安装它，(关于transformers可以阅读[这篇文章](https://huggingface.co/docs/transformers/v4.18.0/en/quicktour))
@@ -50,7 +50,7 @@ print(f"The caption of the given picture: [{caption}]")
 ```
 下面我用下面的图片作为输入，来测试上面的代码的执行效果，
 
-![image](/images/2023-12-28-build-story-teller/car.jpg)
+![image](/images/car.jpg)
 
 得到了如下的结果，
 
@@ -74,7 +74,7 @@ The caption of the given picture: [a model car on a table]
 1. Llama2训练用的中文语料不多，所以生成的中文并不是很自然（尤其和chatGPT的结果对比后更加明显）
 2. 由于第一步得到的描述“a model car on a table”是英文，而7b模型的能力有限，无法把生成的英文内容翻译为中文
 
-![image](/images/2023-12-28-build-story-teller/llama2-7b-output.png)
+![image](/images/llama2-7b-output.png)
 *Llama2-7b生成的故事文本*
 
 而chatGLM3模型是中国的智谱和清华大学联合开发的，对于中文的处理要好很多。但是chatGLM的问题在于本地运行消耗的资源太高。为了运行chatGLM3，我使用了自己另一台搭载32GB内存的linux laptop，没有显存和显卡，所以用CPU来运行，大概要花3-4分钟到时间才能得到文本。虽然文本的质量有所提高，但是可用性太差了。
@@ -137,7 +137,7 @@ chatGPT生成的这个故事如下，还挺有趣的，而且结尾竟然还上�
 
 虽然TTS很成熟，但是Huggingface上免费的午餐并不是很多，
 
-![image](/images/2023-12-28-build-story-teller/tts-models.png)
+![image](/images/tts-models.png)
 
 我按照顺序，依次试了几个，要么收费、要么不支持中文、要么shutting down了。直到第六个模型才真的可用。
 

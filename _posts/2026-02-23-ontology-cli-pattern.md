@@ -32,7 +32,7 @@ external system -> sync/adapter -> local storage (optional) -> ontology layer ->
 
 这条线基本解释了代码库的大部分目录结构，也解释了为什么业务逻辑不应该堆进命令层。
 
-![架构图](/images/2026-06-07-ontology-cli-pattern/architecture.svg)
+![架构图](/images/architecture.svg)
 
 这张图里最重要的不是箭头数量，而是边界：外部数据只从 adapter 进来，领域语义只在 ontology 里稳定，CLI 和 WebUI 都只是访问入口。
 

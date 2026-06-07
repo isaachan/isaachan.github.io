@@ -18,7 +18,7 @@ At first, it was tempting to describe the platform as a unified inference API an
 
 ## Overview
 
-![AI Platform overview](/images/2026-04-11-ai-platform-primitives/overview.svg)
+![AI Platform overview](/images/overview.svg)
 
 ### Task abstraction
 

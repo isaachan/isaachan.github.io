@@ -37,7 +37,7 @@ The basic shape became:
 
 That sounds repetitive, but the repetition is the point. The platform should not trust a single upfront check.
 
-![Policy enforcement flow](/images/2026-05-07-ai-platform-policy-in-practice/policy-flow.svg)
+![Policy enforcement flow](/images/policy-flow.svg)
 
 ## Where the policy engine runs
 

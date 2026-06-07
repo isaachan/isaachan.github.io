@@ -10,7 +10,7 @@ tags:
 
 在上周LangChain发布的[LangChain State of AI 2023](https://blog.langchain.dev/langchain-state-of-ai-2023/)中，有一项是关于“Most Used OSS Model Providers”的排名，榜单上的第三名是一个叫Ollama的工具，简单尝试了一下，感觉使用起来非常方便。这篇blog就汇总了我在使用过程中的一些tips。
 
-![image](/images/2023-12-31-ollama-on-mac/ollama-as-a-popular-oss-model-provider.png)
+![image](/images/ollama-as-a-popular-oss-model-provider.png)
 *Ollama是排名第三的开源模型Provider*
 
 # 下载安装
@@ -21,7 +21,7 @@ tags:
 
 如何你熟悉Docker，那么上手Ollama几乎是没有成本的。Ollama的设计和命令行接口和Docker很相似。Ollama像管理镜像一样管理远端或本地的大模型。如果你第一次在本地运行一个大模型，那么Ollama会首先下载它并保存在本地。
 
-![image](/images/2023-12-31-ollama-on-mac/ollama-download-model.png)
+![image](/images/ollama-download-model.png)
 *Ollama初次使用codellama模型前需要下载*
 
 当模型已经下载到了本地，再使用的时候，就可以直接运行它了，下面是运行了一个名为codellama的对话大模型，它的版本是latest。

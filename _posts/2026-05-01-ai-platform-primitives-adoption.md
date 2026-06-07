@@ -20,7 +20,7 @@ The feedback was consistent: the primitives were useful, but the original framin
 
 The biggest change was this: we stopped describing the platform as a list of primitives and started describing it as a stack.
 
-![AI platform primitives stack](/images/2026-05-01-ai-platform-primitives-adoption/stack.svg)
+![AI platform primitives stack](/images/stack.svg)
 
 The important shift is that the layers do different jobs.
 
