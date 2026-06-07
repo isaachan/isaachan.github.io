@@ -20,7 +20,7 @@ At first, it was tempting to describe the platform as a unified inference API an
 
 ![AI Platform overview](/images/2026-04-11-ai-platform-primitives/overview.svg)
 
-### 1. Task abstraction
+### Task abstraction
 
 We started with task abstraction because teams were already describing the same work in different words: 
 - summarize, 
@@ -35,7 +35,7 @@ The platform should turn those into standard task contracts instead of leaving e
 
 That abstraction carries the `input type`, `output schema`, `review requirement`, `allowed toolset`, and default `routing policy`. It does not force the same wording everywhere. It just makes the task boundaries clear enough that teams can reuse them.
 
-### 2. Context abstraction
+### Context abstraction
 
 Context engineering was the most duplicated layer, and also the easiest place to make subtle mistakes. So we treated context as a *reusable package* rather than a prompt fragment.
 
@@ -50,7 +50,7 @@ Each package needs to define where the `data` comes from, how `retrieval` works,
 
 This is the part that usually gets rebuilt badly. Once a team has a half-working retrieval pipeline, it is hard to share. A context abstraction gives us one place to keep that logic honest.
 
-### 3. Tool abstraction
+### Tool abstraction
 
 The next layer was tool abstraction. No team should need to build direct adapters to Git, CI/CD, requirements systems, or test systems every time they want an AI workflow.
 
@@ -66,13 +66,13 @@ The important part is not the verb list itself. The important part is that each 
 
 Once those rules are inside the platform, application teams can compose workflows without rebuilding their own security layer.
 
-### 4. Model abstraction
+### Model abstraction
 
 Model abstraction was the easiest to explain and the easiest to overstate. Raw model access is useful, but it is not enough to make the platform reusable.
 
 What teams actually need is a unified inference API, structured output support, routing across model tiers, fallback behavior, token and cost telemetry, and deployment awareness for cloud versus private models. That lets product teams build against platform semantics instead of vendor-specific SDK behavior.
 
-### 5. Policy abstraction
+### Policy abstraction
 
 Policy was the place where cross-department discussions became real. If every team interprets policy differently, the platform fragments immediately.
 
@@ -87,13 +87,13 @@ Each policy sets the data classes, tool classes, approval requirements, logging 
 
 That way, application teams inherit controls instead of recreating them in every project.
 
-### 6. Evaluation abstraction
+### Evaluation abstraction
 
 Evaluation is usually the first thing teams say they will add later, which is another way of saying they may never add it. That is why we wanted it as a platform primitive.
 
 The shared layer should include task-level eval harnesses, golden datasets or rubric sets, scoring pipelines, regression hooks, side-by-side model comparison, and online feedback metrics. If the platform makes evaluation easy, teams can improve without inventing a separate measurement framework each time.
 
-### 7. Workflow abstraction
+### Workflow abstraction
 
 The last primitive was workflow abstraction. This is where the platform stops being a pile of building blocks and starts looking like a system teams can actually use.
 
