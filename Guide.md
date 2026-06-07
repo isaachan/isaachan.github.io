@@ -142,10 +142,12 @@ GitHub Actions will build and deploy the site automatically from `main`.
 
 Jekyll parses Liquid syntax inside Markdown. If a code block contains template text like:
 
+{% raw %}
 ```text
 {{ .System }}
 {{ .Prompt }}
 ```
+{% endraw %}
 
 wrap that block with raw tags so Jekyll does not try to evaluate it:
 
