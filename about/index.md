@@ -5,7 +5,7 @@ type: about
 
 ![Kai Han](/images/self.jpg)
 
-Hi, I'm **Kai Han** — an enterprise architect, a devoted father and husband, and an adrenaline-fueled car racer.
+Hi, I'm **[Kai Han](mailto:isaachanstar@gmail.com)**  — an enterprise architect, a devoted father and husband, and an adrenaline-fueled car racer.
 
 ## What I Do
 
@@ -28,9 +28,13 @@ I write in both English and Chinese (中文), depending on the topic and mood.
 
 When I'm not coding, you'll find me:
 
-- 🏎️ Behind the wheel of my BMW M4, chasing the perfect lap
+- 🏎️ Behind the wheel of my M Power, AMG, MX5, Z4, and Mini Cooper, chasing the perfect lap
 - 📚 Reading — history, philosophy, technology, and everything in between
 - 👨‍👩‍👧 Spending quality time with my family
+
+## Contact
+
+📧 **Email:** [isaachanstar@gmail.com](mailto:isaachanstar@gmail.com)
 
 ---
 
