@@ -55,7 +55,7 @@ We did not start from abstract theory. We started from three cases that people a
 
 The first case ended up driving most of the platform design.
 
-## Requirement Impact Analysis changed the most
+## Requirement Impact Analysis implementation
 
 At first, requirement impact analysis sounded like a single task. It is not. Once we wrote the actual steps down, it became obvious that it is a small orchestration problem.
 
@@ -156,7 +156,7 @@ So the evaluation criteria changed too. We were not only asking whether the answ
 
 In practice, the requirement case became the best forcing function for requirement impact analysis because it exposed every missing primitive at once.
 
-## The workflow definition changed a little
+## The workflow definition refinrefinement
 
 One thing we changed explicitly was the definition of `workflow`.
 

@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980">
+  <defs>
+    <style>
+      .title { font: 700 32px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #111827; }
+      .subtitle { font: 500 16px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #475569; }
+      .section { font: 700 13px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #64748b; letter-spacing: .08em; }
+      .entity { fill: #ffffff; stroke: #334155; stroke-width: 2; rx: 16; }
+      .core { fill: #eef2ff; stroke: #4f46e5; }
+      .risk { fill: #fef2f2; stroke: #dc2626; }
+      .release { fill: #ecfeff; stroke: #0891b2; }
+      .code { fill: #f0fdf4; stroke: #16a34a; }
+      .test { fill: #fff7ed; stroke: #ea580c; }
+      .name { font: 700 20px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #0f172a; }
+      .hint { font: 500 13px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #64748b; }
+      .line { stroke: #64748b; stroke-width: 2.1; fill: none; marker-end: url(#arrow); stroke-linecap: round; stroke-linejoin: round; }
+      .line-light { stroke: #94a3b8; stroke-width: 1.8; fill: none; marker-end: url(#arrowLight); stroke-linecap: round; stroke-linejoin: round; }
+      .rel-bg { fill: #ffffff; opacity: .92; }
+      .rel { font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #475569; }
+      .legend { font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #475569; }
+    </style>
+    <filter id="shadow" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrowLight" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="980" fill="#ffffff"/>
+  <text x="56" y="58" class="title">Entity Summary Across Context Packages</text>
+  <text x="56" y="88" class="subtitle">Entity-centric view with cleaned spacing, fewer crossings, and separated functional lanes.</text>
+
+  <!-- lane labels -->
+  <text x="62" y="132" class="section">PLANNING / OWNERSHIP</text>
+  <line x1="60" y1="150" x2="1540" y2="150" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="62" y="300" class="section">CODE CHANGE FLOW</text>
+  <line x1="60" y1="318" x2="1540" y2="318" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="62" y="470" class="section">CI / TEST VERIFICATION</text>
+  <line x1="60" y1="488" x2="1540" y2="488" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="62" y="650" class="section">RISK AND RELEASE CONTROL</text>
+  <line x1="60" y1="668" x2="1540" y2="668" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- relationships behind nodes -->
+  <!-- planning row -->
+  <path class="line" d="M 280 200 H 380"/>
+  <path class="line" d="M 620 200 H 720"/>
+  <path class="line" d="M 960 200 H 1060"/>
+
+  <!-- planning to code -->
+  <path class="line-light" d="M 170 242 V 360"/>
+  <path class="line-light" d="M 840 242 V 360"/>
+
+  <!-- code row -->
+  <path class="line" d="M 280 390 H 380"/>
+  <path class="line" d="M 620 390 H 720"/>
+  <path class="line" d="M 960 390 H 1060"/>
+
+  <!-- code to tests -->
+  <path class="line-light" d="M 840 432 V 550"/>
+  <path class="line-light" d="M 490 432 V 550"/>
+
+  <!-- test row -->
+  <path class="line" d="M 280 580 H 380"/>
+  <path class="line" d="M 620 580 H 720"/>
+  <path class="line" d="M 960 580 H 1060"/>
+  <path class="line" d="M 1300 580 H 1400"/>
+
+  <!-- issue / release row -->
+  <path class="line" d="M 300 745 H 400"/>
+  <path class="line" d="M 640 745 H 740"/>
+  <path class="line" d="M 980 745 H 1080"/>
+  <path class="line" d="M 1200 828 V 787"/>
+  <path class="line" d="M 1320 760 H 1470 V 828"/>
+
+  <!-- cross-lane long relationships routed around the right/left edges -->
+  <path class="line-light" d="M 490 242 V 630 H 170 V 703"/>
+  <path class="line-light" d="M 1280 200 H 1560 V 745 H 1320"/>
+  <path class="line-light" d="M 1470 622 V 690 H 1320 V 745"/>
+  <path class="line-light" d="M 490 242 V 810 H 1100 V 787"/>
+
+  <!-- relationship labels -->
+  <g>
+    <rect class="rel-bg" x="308" y="180" width="72" height="22" rx="8"/><text class="rel" x="320" y="196">contains</text>
+    <rect class="rel-bg" x="650" y="180" width="62" height="22" rx="8"/><text class="rel" x="662" y="196">impacts</text>
+    <rect class="rel-bg" x="982" y="180" width="76" height="22" rx="8"/><text class="rel" x="994" y="196">owned by</text>
+
+    <rect class="rel-bg" x="84" y="286" width="92" height="22" rx="8"/><text class="rel" x="96" y="302">maps to repo</text>
+    <rect class="rel-bg" x="744" y="286" width="118" height="22" rx="8"/><text class="rel" x="756" y="302">implemented in</text>
+
+    <rect class="rel-bg" x="322" y="370" width="56" height="22" rx="8"/><text class="rel" x="334" y="386">has MR</text>
+    <rect class="rel-bg" x="650" y="370" width="72" height="22" rx="8"/><text class="rel" x="662" y="386">contains</text>
+    <rect class="rel-bg" x="990" y="370" width="64" height="22" rx="8"/><text class="rel" x="1002" y="386">changes</text>
+
+    <rect class="rel-bg" x="790" y="474" width="64" height="22" rx="8"/><text class="rel" x="802" y="490">triggers</text>
+    <rect class="rel-bg" x="414" y="474" width="146" height="22" rx="8"/><text class="rel" x="426" y="490">validated by build</text>
+
+    <rect class="rel-bg" x="326" y="560" width="42" height="22" rx="8"/><text class="rel" x="338" y="576">has</text>
+    <rect class="rel-bg" x="658" y="560" width="44" height="22" rx="8"/><text class="rel" x="670" y="576">runs</text>
+    <rect class="rel-bg" x="986" y="560" width="74" height="22" rx="8"/><text class="rel" x="998" y="576">executes</text>
+    <rect class="rel-bg" x="1328" y="560" width="72" height="22" rx="8"/><text class="rel" x="1340" y="576">produces</text>
+
+    <rect class="rel-bg" x="323" y="725" width="78" height="22" rx="8"/><text class="rel" x="335" y="741">classified</text>
+    <rect class="rel-bg" x="662" y="725" width="78" height="22" rx="8"/><text class="rel" x="674" y="741">prioritized</text>
+    <rect class="rel-bg" x="1004" y="725" width="70" height="22" rx="8"/><text class="rel" x="1016" y="741">blocks</text>
+    <rect class="rel-bg" x="1218" y="797" width="78" height="22" rx="8"/><text class="rel" x="1230" y="813">promotes</text>
+    <rect class="rel-bg" x="1382" y="788" width="76" height="22" rx="8"/><text class="rel" x="1394" y="804">may have</text>
+
+    <rect class="rel-bg" x="78" y="612" width="106" height="22" rx="8"/><text class="rel" x="90" y="628">may create</text>
+    <rect class="rel-bg" x="1514" y="432" width="76" height="22" rx="8"/><text class="rel" x="1526" y="448">approves</text>
+    <rect class="rel-bg" x="1390" y="664" width="78" height="22" rx="8"/><text class="rel" x="1402" y="680">supports</text>
+    <rect class="rel-bg" x="642" y="790" width="118" height="22" rx="8"/><text class="rel" x="654" y="806">included in release</text>
+  </g>
+
+  <!-- nodes -->
+  <rect class="entity core" rx="16" ry="16" x="80" y="158" width="200" height="84"/>
+  <text class="name" x="112" y="194">Project</text>
+  <text class="hint" x="112" y="216">product / initiative</text>
+
+  <rect class="entity core" rx="16" ry="16" x="380" y="158" width="240" height="84"/>
+  <text class="name" x="412" y="194">Requirement</text>
+  <text class="hint" x="412" y="216">feature / demand</text>
+
+  <rect class="entity core" rx="16" ry="16" x="720" y="158" width="240" height="84"/>
+  <text class="name" x="752" y="194">Component</text>
+  <text class="hint" x="752" y="216">module / subsystem</text>
+
+  <rect class="entity core" rx="16" ry="16" x="1060" y="158" width="220" height="84"/>
+  <text class="name" x="1092" y="194">Owner</text>
+  <text class="hint" x="1092" y="216">team / person</text>
+
+  <rect class="entity code" rx="16" ry="16" x="80" y="348" width="200" height="84"/>
+  <text class="name" x="112" y="384">Repo</text>
+  <text class="hint" x="112" y="406">source container</text>
+
+  <rect class="entity code" rx="16" ry="16" x="380" y="348" width="240" height="84"/>
+  <text class="name" x="412" y="384">Merge Request</text>
+  <text class="hint" x="412" y="406">reviewed change</text>
+
+  <rect class="entity code" rx="16" ry="16" x="720" y="348" width="240" height="84"/>
+  <text class="name" x="752" y="384">Commit</text>
+  <text class="hint" x="752" y="406">atomic code delta</text>
+
+  <rect class="entity code" rx="16" ry="16" x="1060" y="348" width="220" height="84"/>
+  <text class="name" x="1092" y="384">File</text>
+  <text class="hint" x="1092" y="406">changed artifact</text>
+
+  <rect class="entity test" rx="16" ry="16" x="80" y="538" width="200" height="84"/>
+  <text class="name" x="112" y="574">Pipeline</text>
+  <text class="hint" x="112" y="596">automation entry</text>
+
+  <rect class="entity test" rx="16" ry="16" x="380" y="538" width="240" height="84"/>
+  <text class="name" x="412" y="574">Build</text>
+  <text class="hint" x="412" y="596">compile / package</text>
+
+  <rect class="entity test" rx="16" ry="16" x="720" y="538" width="240" height="84"/>
+  <text class="name" x="752" y="574">Test Run</text>
+  <text class="hint" x="752" y="596">execution instance</text>
+
+  <rect class="entity test" rx="16" ry="16" x="1060" y="538" width="240" height="84"/>
+  <text class="name" x="1092" y="574">Test Case</text>
+  <text class="hint" x="1092" y="596">verification item</text>
+
+  <rect class="entity test" rx="16" ry="16" x="1400" y="538" width="140" height="84"/>
+  <text class="name" x="1428" y="574">Report</text>
+  <text class="hint" x="1428" y="596">evidence</text>
+
+  <rect class="entity risk" rx="16" ry="16" x="80" y="703" width="220" height="84"/>
+  <text class="name" x="112" y="739">Issue</text>
+  <text class="hint" x="112" y="761">risk / defect</text>
+
+  <rect class="entity risk" rx="16" ry="16" x="400" y="703" width="240" height="84"/>
+  <text class="name" x="432" y="739">Severity</text>
+  <text class="hint" x="432" y="761">impact scale</text>
+
+  <rect class="entity risk" rx="16" ry="16" x="740" y="703" width="240" height="84"/>
+  <text class="name" x="772" y="739">Priority</text>
+  <text class="hint" x="772" y="761">action order</text>
+
+  <rect class="entity release" rx="16" ry="16" x="1080" y="703" width="240" height="84"/>
+  <text class="name" x="1112" y="739">Release</text>
+  <text class="hint" x="1112" y="761">delivery target</text>
+
+  <rect class="entity release" rx="16" ry="16" x="1080" y="828" width="240" height="84"/>
+  <text class="name" x="1112" y="864">Release Candidate</text>
+  <text class="hint" x="1112" y="886">candidate build</text>
+
+  <rect class="entity release" rx="16" ry="16" x="1400" y="828" width="140" height="84"/>
+  <text class="name" x="1428" y="864">Waiver</text>
+  <text class="hint" x="1428" y="886">exception</text>
+
+  <!-- small legend -->
+  <g transform="translate(1080 62)">
+    <rect x="0" y="0" width="440" height="42" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+    <circle cx="24" cy="21" r="6" fill="#eef2ff" stroke="#4f46e5"/><text class="legend" x="38" y="26">core</text>
+    <circle cx="100" cy="21" r="6" fill="#f0fdf4" stroke="#16a34a"/><text class="legend" x="114" y="26">code</text>
+    <circle cx="178" cy="21" r="6" fill="#fff7ed" stroke="#ea580c"/><text class="legend" x="192" y="26">test</text>
+    <circle cx="252" cy="21" r="6" fill="#fef2f2" stroke="#dc2626"/><text class="legend" x="266" y="26">risk</text>
+    <circle cx="328" cy="21" r="6" fill="#ecfeff" stroke="#0891b2"/><text class="legend" x="342" y="26">release</text>
+  </g>
+</svg>
