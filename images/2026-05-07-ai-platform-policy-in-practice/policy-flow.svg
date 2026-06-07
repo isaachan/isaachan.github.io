@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Policy as a cross-cutting layer</title>
+  <desc id="desc">Capability, workflow or agent or skill, task, and tool are arranged above a cross-cutting policy engine bar.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font: 700 28px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #0f172a; }
+      .label { font: 700 18px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #111827; text-anchor: middle; }
+      .text { font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #334155; text-anchor: middle; }
+      .small { font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #475569; text-anchor: middle; }
+      .box { fill: #ffffff; stroke: #2563eb; stroke-width: 2.5; rx: 16; ry: 16; }
+      .policy { fill: #eff6ff; stroke: #1d4ed8; stroke-width: 3; rx: 20; ry: 20; }
+      .hlink { stroke: #94a3b8; stroke-width: 2.4; fill: none; marker-end: url(#arrowGray); }
+      .vlink { stroke: #94a3b8; stroke-width: 2.4; fill: none; }
+      .policyUp { stroke: #1d4ed8; stroke-width: 3; fill: none; marker-end: url(#arrowBlue); }
+      .check { font: 600 12px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #475569; text-anchor: middle; }
+      .note { font: 600 14px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #64748b; text-anchor: middle; }
+    </style>
+    <marker id="arrowGray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8" />
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1d4ed8" />
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="760" rx="28" ry="28" />
+  <text x="600" y="52" text-anchor="middle" class="title">Policy as a cross-cutting layer</text>
+
+  <!-- top row -->
+  <rect class="box" x="70" y="160" width="220" height="96" />
+  <text class="label" x="180" y="198">Capability</text>
+  <text class="text" x="180" y="223">entry and routing</text>
+
+  <rect class="box" x="360" y="160" width="220" height="96" />
+  <text class="label" x="470" y="193">Workflow / Agent / Skill</text>
+  <text class="text" x="470" y="220">orchestrator layer</text>
+
+  <rect class="box" x="650" y="160" width="180" height="96" />
+  <text class="label" x="740" y="198">Task</text>
+  <text class="text" x="740" y="223">stable contract</text>
+
+  <rect class="box" x="920" y="160" width="180" height="96" />
+  <text class="label" x="1010" y="198">Tool</text>
+  <text class="text" x="1010" y="223">gateway call</text>
+
+  <!-- capability routing check: capability routes into the orchestrator layer -->
+  <path class="hlink" d="M 290 208 L 360 208" />
+  <!-- orchestrator-to-task check: workflow / agent / skill can invoke a bounded task -->
+  <path class="hlink" d="M 580 208 L 650 208" />
+  <!-- task-to-tool check: task reaches the tool gateway through policy -->
+  <path class="hlink" d="M 830 208 L 920 208" />
+
+  <!-- policy check: capability entry authorization -->
+  <!-- policy engine bar -->
+  <rect class="policy" x="90" y="540" width="1020" height="110" />
+  <text class="label" x="600" y="584">Policy engine</text>
+  <text class="text" x="600" y="610">cross-cutting checks for access control, read-only default, review, citations, and audit</text>
+  <text class="small" x="600" y="636">the same engine is invoked at capability entry, tool gateway, and write / publish boundaries</text>
+
+  <!-- policy connectors -->
+  <!-- policy check: capability entry authorization -->
+  <path class="policyUp" d="M 180 540 L 180 470" />
+  <!-- policy check: orchestrator invocation scope and inherited permissions -->
+  <path class="policyUp" d="M 470 540 L 470 470" />
+  <!-- policy check: task-level execution gate before evidence retrieval or synthesis -->
+  <path class="policyUp" d="M 740 540 L 740 470" />
+  <!-- policy check: tool gateway authorization before Jira / Git / CI access -->
+  <path class="policyUp" d="M 1010 540 L 1010 470" />
+
+  <!-- policy check: capability layer is governed by the shared policy engine -->
+  <path class="vlink" d="M 180 470 L 180 256" />
+  <!-- policy check: workflow / agent / skill inherits policy and cannot bypass controls -->
+  <path class="vlink" d="M 470 470 L 470 256" />
+  <!-- policy check: task execution is read-only by default unless explicitly allowed -->
+  <path class="vlink" d="M 740 470 L 740 256" />
+  <!-- policy check: tool call requires explicit allow for the target system and action -->
+  <path class="vlink" d="M 1010 470 L 1010 256" />
+
+  <text class="check" x="180" y="318">capability entry auth</text>
+  <text class="check" x="470" y="318">orchestrator scope + inherited permissions</text>
+  <text class="check" x="740" y="318">task gate before evidence retrieval</text>
+  <text class="check" x="1010" y="318">tool gateway allow / deny</text>
+
+  <text x="600" y="710" text-anchor="middle" class="note">policy is not a separate step; it overlays every step</text>
+</svg>
