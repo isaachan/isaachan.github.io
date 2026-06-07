@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">AI platform primitives stack</title>
+  <desc id="desc">A vertical stack showing capability, orchestrator, task, context or tool, and enterprise systems.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font: 700 28px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #0f172a; text-anchor: middle; }
+      .box { fill: #ffffff; stroke: #2563eb; stroke-width: 3; rx: 20; ry: 20; }
+      .top { fill: #dbeafe; }
+      .mid { fill: #eff6ff; }
+      .low { fill: #f8fafc; }
+      .label { font: 700 22px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #111827; text-anchor: middle; }
+      .text { font: 15px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #475569; text-anchor: middle; }
+      .arrow { stroke: #94a3b8; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+      .note { font: 600 14px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; fill: #64748b; text-anchor: middle; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8" />
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="760" rx="28" ry="28" />
+  <text class="title" x="600" y="58">A stack, not a flat list</text>
+
+  <rect class="box top" x="330" y="110" width="540" height="92" />
+  <text class="label" x="600" y="147">Capability</text>
+  <text class="text" x="600" y="173">what the user understands</text>
+
+  <rect class="box mid" x="330" y="235" width="540" height="108" />
+  <text class="label" x="600" y="275">Orchestrator</text>
+  <text class="text" x="600" y="301">Workflow / Agent / Skill</text>
+  <text class="text" x="600" y="325">what the platform executes</text>
+
+  <rect class="box" x="330" y="380" width="540" height="92" />
+  <text class="label" x="600" y="417">Task</text>
+  <text class="text" x="600" y="443">the reusable execution unit</text>
+
+  <rect class="box low" x="330" y="505" width="540" height="108" />
+  <text class="label" x="600" y="545">Context / Tool</text>
+  <text class="text" x="600" y="571">evidence, retrieval, and system access</text>
+  <text class="text" x="600" y="595">how the task gets data and acts safely</text>
+
+  <rect class="box low" x="330" y="650" width="540" height="72" />
+  <text class="label" x="600" y="694">Enterprise Systems</text>
+
+  <path class="arrow" d="M 600 202 L 600 235" />
+  <path class="arrow" d="M 600 343 L 600 380" />
+  <path class="arrow" d="M 600 472 L 600 505" />
+  <path class="arrow" d="M 600 613 L 600 650" />
+
+  <text class="note" x="600" y="742">each layer changes the contract, not just the label</text>
+</svg>
