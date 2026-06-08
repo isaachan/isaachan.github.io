@@ -18,6 +18,8 @@ At the beginning, the discussion was still close to the public AI narrative. Whi
 
 Those questions were not wrong. They were just incomplete.
 
+![Enterprise AI Manifesto](/images/EnterpriseAIManifesto.png)
+
 Once we connected AI with enterprise systems, the shape of the problem changed. A good answer was not enough. The answer had to be traceable. A fast draft was not enough. The draft had to follow the real process. A powerful agent was not enough. The agent had to know what it was allowed to read, what it was allowed to write, and who would be responsible when the output affected a decision.
 
 So after a few months of adoption work, I started to write down the principles we were actually using. It became a small manifesto.
