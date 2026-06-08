@@ -47,22 +47,11 @@ tags:
 
 后来有个大胆的想法：与其让每个词一个一个地"传话"，不如让所有的词**同时看到彼此**。
 
-我给老婆画了个简单的图（虽然我画得不好）：
+我给老婆画了个简单的图：
 
-```
-我们的句子：A cat didn't cross the road because it was tired
+![RNN 和 Transformer 处理句子的方式对比](/images/transformer-explainer.svg)
 
-RNN 的方式：
-cat → didn't → cross → the → road → because → it → was → tired
- |      |        |       |      |       |       |     |
- s1     s2       s3      s4     s5      s6      s7    s8
-（每个词只能看到之前的信息）
-
-Transformer 的方式：
-所有词同时看到彼此：
-A ←→ cat ←→ didn't ←→ cross ←→ ... ←→ it ←→ was ←→ tired
-（每个词都能"看到"所有其他词）
-```
+RNN 像顺序传话；Transformer 则让词之间通过注意力直接建立联系。
 
 我说："Transformer 的核心想法就是，当我们要理解'it'的时候，它不需要一个一个地从'A'传信息过来，而是直接'看'所有的词，然后自己决定哪些词对理解'it'最重要。"
 

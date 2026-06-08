@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 660" role="img" aria-labelledby="transformer-diagram-title transformer-diagram-desc">
+  <title id="transformer-diagram-title">RNN 和 Transformer 处理句子的方式对比</title>
+  <desc id="transformer-diagram-desc">RNN 按顺序传递状态，Transformer 让每个词通过注意力同时看到其他词。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4f5b66" />
+    </marker>
+    <marker id="arrow-start" markerWidth="10" markerHeight="10" refX="2" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 10 0 L 0 5 L 10 10 z" fill="#2f6f73" />
+    </marker>
+    <marker id="arrow-end" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2f6f73" />
+    </marker>
+    <style>
+      .diagram-bg { fill: #fbfaf7; }
+      .section-title { fill: #22313f; font: 700 24px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .section-note { fill: #5f6b73; font: 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .sentence { fill: #22313f; font: 18px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .token { fill: #ffffff; stroke: #7b8794; stroke-width: 1.5; }
+      .token-text { fill: #22313f; font: 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .state { fill: #eef2f5; stroke: #9aa6b2; stroke-width: 1.3; }
+      .state-text { fill: #4f5b66; font: 15px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .arrow { stroke: #4f5b66; stroke-width: 2; fill: none; }
+      .attention { stroke: #2f6f73; stroke-width: 2.2; fill: none; opacity: 0.82; }
+      .highlight { fill: #f8df72; stroke: #b28a00; stroke-width: 2; }
+      .target { fill: #f2fbf7; stroke: #2f6f73; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect class="diagram-bg" x="0" y="0" width="1060" height="660" rx="18" />
+
+  <text class="sentence" x="48" y="54">
+    我们的句子：A cat didn't cross the road because it was tired
+  </text>
+
+  <text class="section-title" x="48" y="112">RNN 的方式</text>
+  <text class="section-note" x="48" y="140">一个词接一个词处理，状态沿着链条往后传</text>
+
+  <g transform="translate(48 176)">
+    <rect class="token" x="0" y="0" width="70" height="42" rx="8" />
+    <text class="token-text" x="35" y="27" text-anchor="middle">A</text>
+    <rect class="token" x="95" y="0" width="70" height="42" rx="8" />
+    <text class="token-text" x="130" y="27" text-anchor="middle">cat</text>
+    <rect class="token" x="190" y="0" width="70" height="42" rx="8" />
+    <text class="token-text" x="225" y="27" text-anchor="middle">didn't</text>
+    <rect class="token" x="285" y="0" width="70" height="42" rx="8" />
+    <text class="token-text" x="320" y="27" text-anchor="middle">cross</text>
+    <rect class="token" x="380" y="0" width="70" height="42" rx="8" />
+    <text class="token-text" x="415" y="27" text-anchor="middle">the</text>
+    <rect class="token" x="475" y="0" width="70" height="42" rx="8" />
+    <text class="token-text" x="510" y="27" text-anchor="middle">road</text>
+    <rect class="token" x="570" y="0" width="88" height="42" rx="8" />
+    <text class="token-text" x="614" y="27" text-anchor="middle">because</text>
+    <rect class="token" x="683" y="0" width="70" height="42" rx="8" />
+    <text class="token-text" x="718" y="27" text-anchor="middle">it</text>
+    <rect class="token" x="778" y="0" width="70" height="42" rx="8" />
+    <text class="token-text" x="813" y="27" text-anchor="middle">was</text>
+    <rect class="token" x="873" y="0" width="70" height="42" rx="8" />
+    <text class="token-text" x="908" y="27" text-anchor="middle">tired</text>
+
+    <path class="arrow" d="M 72 21 H 92" marker-end="url(#arrow)" />
+    <path class="arrow" d="M 167 21 H 187" marker-end="url(#arrow)" />
+    <path class="arrow" d="M 262 21 H 282" marker-end="url(#arrow)" />
+    <path class="arrow" d="M 357 21 H 377" marker-end="url(#arrow)" />
+    <path class="arrow" d="M 452 21 H 472" marker-end="url(#arrow)" />
+    <path class="arrow" d="M 547 21 H 567" marker-end="url(#arrow)" />
+    <path class="arrow" d="M 660 21 H 680" marker-end="url(#arrow)" />
+    <path class="arrow" d="M 755 21 H 775" marker-end="url(#arrow)" />
+    <path class="arrow" d="M 850 21 H 870" marker-end="url(#arrow)" />
+
+    <path class="arrow" d="M 35 46 V 72" />
+    <path class="arrow" d="M 130 46 V 72" />
+    <path class="arrow" d="M 225 46 V 72" />
+    <path class="arrow" d="M 320 46 V 72" />
+    <path class="arrow" d="M 415 46 V 72" />
+    <path class="arrow" d="M 510 46 V 72" />
+    <path class="arrow" d="M 614 46 V 72" />
+    <path class="arrow" d="M 718 46 V 72" />
+    <path class="arrow" d="M 813 46 V 72" />
+    <path class="arrow" d="M 908 46 V 72" />
+
+    <rect class="state" x="10" y="74" width="50" height="34" rx="17" />
+    <text class="state-text" x="35" y="96" text-anchor="middle">s1</text>
+    <rect class="state" x="105" y="74" width="50" height="34" rx="17" />
+    <text class="state-text" x="130" y="96" text-anchor="middle">s2</text>
+    <rect class="state" x="200" y="74" width="50" height="34" rx="17" />
+    <text class="state-text" x="225" y="96" text-anchor="middle">s3</text>
+    <rect class="state" x="295" y="74" width="50" height="34" rx="17" />
+    <text class="state-text" x="320" y="96" text-anchor="middle">s4</text>
+    <rect class="state" x="390" y="74" width="50" height="34" rx="17" />
+    <text class="state-text" x="415" y="96" text-anchor="middle">s5</text>
+    <rect class="state" x="485" y="74" width="50" height="34" rx="17" />
+    <text class="state-text" x="510" y="96" text-anchor="middle">s6</text>
+    <rect class="state" x="589" y="74" width="50" height="34" rx="17" />
+    <text class="state-text" x="614" y="96" text-anchor="middle">s7</text>
+    <rect class="state" x="693" y="74" width="50" height="34" rx="17" />
+    <text class="state-text" x="718" y="96" text-anchor="middle">s8</text>
+    <rect class="state" x="788" y="74" width="50" height="34" rx="17" />
+    <text class="state-text" x="813" y="96" text-anchor="middle">s9</text>
+    <rect class="state" x="883" y="74" width="50" height="34" rx="17" />
+    <text class="state-text" x="908" y="96" text-anchor="middle">s10</text>
+  </g>
+  <text class="section-note" x="48" y="326">每个词主要只能看到之前的信息，越长的链条越容易丢失细节。</text>
+
+  <text class="section-title" x="48" y="386">Transformer 的方式</text>
+  <text class="section-note" x="48" y="414">所有词同时看到彼此；理解 “it” 时，可以直接关注相关词</text>
+
+  <g transform="translate(48 500)">
+    <path class="attention" d="M 718 0 C 632 -74 182 -74 130 0" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <path class="attention" d="M 718 0 C 606 -54 350 -54 320 0" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <path class="attention" d="M 718 0 C 672 -42 560 -42 510 0" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <path class="attention" d="M 718 0 C 756 -42 864 -42 908 0" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+
+    <rect class="token" x="0" y="0" width="70" height="42" rx="8" />
+    <text class="token-text" x="35" y="27" text-anchor="middle">A</text>
+    <rect class="highlight" x="95" y="0" width="70" height="42" rx="8" />
+    <text class="token-text" x="130" y="27" text-anchor="middle">cat</text>
+    <rect class="token" x="190" y="0" width="70" height="42" rx="8" />
+    <text class="token-text" x="225" y="27" text-anchor="middle">didn't</text>
+    <rect class="token" x="285" y="0" width="70" height="42" rx="8" />
+    <text class="token-text" x="320" y="27" text-anchor="middle">cross</text>
+    <rect class="token" x="380" y="0" width="70" height="42" rx="8" />
+    <text class="token-text" x="415" y="27" text-anchor="middle">the</text>
+    <rect class="highlight" x="475" y="0" width="70" height="42" rx="8" />
+    <text class="token-text" x="510" y="27" text-anchor="middle">road</text>
+    <rect class="token" x="570" y="0" width="88" height="42" rx="8" />
+    <text class="token-text" x="614" y="27" text-anchor="middle">because</text>
+    <rect class="target" x="683" y="0" width="70" height="42" rx="8" />
+    <text class="token-text" x="718" y="27" text-anchor="middle">it</text>
+    <rect class="token" x="778" y="0" width="70" height="42" rx="8" />
+    <text class="token-text" x="813" y="27" text-anchor="middle">was</text>
+    <rect class="highlight" x="873" y="0" width="70" height="42" rx="8" />
+    <text class="token-text" x="908" y="27" text-anchor="middle">tired</text>
+  </g>
+  <text class="section-note" x="48" y="606">每个词都能“看到”所有其他词，再由注意力权重决定哪些信息更重要。</text>
+</svg>
