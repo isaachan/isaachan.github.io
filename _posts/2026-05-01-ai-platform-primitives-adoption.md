@@ -219,7 +219,7 @@ So the current direction is:
 
 That is less elegant than the first draft, but it survives real adoption better.
 
-## Where is skill
+## Where is "Skill"?
 
 At some point we asked a different question: where does `skill` fit in this picture?
 
